@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	 <bean id="advertService" class="nju.software.service.AdvertService"></bean>
+	 <bean id="albumService" class="nju.software.service.AlbumService"></bean>
+	 <bean id="collectService" class="nju.software.service.CollectService"></bean>
+	 <bean id="guessYouLikeService" class="nju.software.service.GuessYouLikeService"></bean>
+	 <bean id="homeService" class="nju.software.service.HomeService" >
+	  
+	 </bean>
+	 <bean id="hotStampService" class="nju.software.service.HotStampService"></bean>
+	 <bean id="newStampService" class="nju.software.service.NewStampService"></bean>
+	 <bean id="personAlbumService" class="nju.software.service.PersonAlbumService"></bean>
+	 <bean id="personHomeService" class="nju.software.service.PersonHomeService"></bean>
+	 <bean id="searchService" class="nju.software.service.SearchService"></bean>
+	 <bean id="similarStampService" class="nju.software.service.SimilarStampService"></bean>
+	 <bean id="stampService" class="nju.software.service.StampService"></bean>
+	 <!--  -->
+	 <bean id="albumServlet" class="nju.sorftware.servelt.AlbumServlet">
+	   <property name="albumService">
+	   <ref bean="albumService"/>
+	   </property>
+	   <property name="collectService">
+	    <ref bean="collectService"/>
+	   </property>
+	 </bean>
+	 <!--  -->
+	 <bean id="homeServlet" class="nju.sorftware.servelt.HomeServlet" scope="prototype">
+	   <property name="advertService">
+	   <ref bean="advertService"/>
+	   </property>
+	   <property name="homeService">
+	    <ref bean="homeService"/>
+	   </property>
+	   <property name="stampService">
+	   <ref bean="stampService"/>
+	   </property>
+	 </bean>
+</beans>

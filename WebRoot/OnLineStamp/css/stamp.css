@@ -1,0 +1,46 @@
+.title_style {
+	font-size: 24px;
+	font-weight: bold;
+}
+.a_button {
+	background-color: #0C3;
+	height: 30px;
+}
+.a_td {
+	background-color: #C0C0C0;
+	height: 40px;
+	text-align: left;
+}
+.b_td {
+	background-color: #C0C0C0;
+	height: 50px;
+}
+.big_green_font {
+	background-color: #FFFFFF;
+	height: 40px;
+	font-size: 36px;
+	font-weight: bold;
+	color: #996600;
+	padding: 2px;
+}
+.small_button {
+	background-color: #FFFFFF;
+}
+.medium_bn {
+	background-color: #999966;
+	height: 30px;
+}
+.message {
+	font-size: 24px;
+	color: #0000CC;
+}
+.login_center {
+	font-size: 24px;
+}
+.login_center {
+	text-align: center;
+
+}
+.login_center #submit {
+	text-align: justify;
+}
